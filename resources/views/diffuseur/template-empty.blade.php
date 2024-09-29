@@ -1,0 +1,1 @@
+@extends('diffuseur.layout')
