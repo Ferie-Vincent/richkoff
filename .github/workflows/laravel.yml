@@ -40,6 +40,10 @@ jobs:
         env:
           APP_ENV: production
 
+      - name: Create Symlink for Storage
+        run: |
+          php -r "symlink('/home/admin/web/richkoff.com/public_html/storage/app/public', '/home/admin/web/richkoff.com/public_html/public/storage');"
+          
       - name: Deploy to FTP Server
         uses: SamKirkland/FTP-Deploy-Action@4.3.1
         with:
