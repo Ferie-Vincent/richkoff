@@ -44,7 +44,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.1
         with:
           server: ftp.richkoff.com
-          username: ferie@richkoff.com
+          username: admin@richkoff.com
           password: Azertyuiop1234.
           local-dir: ./ # Dossier à uploader (racine du projet Laravel)
           server-dir: ./public_html/ # Chemin du répertoire sur le serveur
