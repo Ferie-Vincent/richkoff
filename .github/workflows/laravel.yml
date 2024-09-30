@@ -1,3 +1,4 @@
+1234.
 name: Laravel Deploy
 
 on:
@@ -45,7 +46,7 @@ jobs:
         with:
           server: ftp.richkoff.com
           username: ferie@richkoff.com
-          password: ${{ secrets.RICHKOFF_FTP_PASSWORD }} 
+          password: Azertyuiop1234.
           local-dir: ./ # Dossier à uploader (racine du projet Laravel)
           server-dir: ./public_html/ # Chemin du répertoire sur le serveur
           exclude: |
