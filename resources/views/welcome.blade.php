@@ -40,6 +40,70 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/hi.css') }}" />
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/demo/style-demo.css') }}" />
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/front-modal.css') }}" />
+  <style>
+    .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .modal-content {
+        position: relative;
+        text-align: center;
+    }
+    
+    .img-front {
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+        object-fit: contain;
+        border: 5px solid white;
+    }
+    
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: white;
+        border-radius: 50%;
+        padding: 5px;
+        cursor: pointer;
+        font-size: 20px;
+        line-height: 20px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: none;
+        cursor: pointer;
+    }
+
+    .navbar {
+        background-color: transparent;
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            background-color: transparent !important;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .close {
+            left: -389px;
+            top: -11px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .close {
+            left: -20px; 
+            top: -10px; 
+        }
+    }
+    </style>
 
   <meta name="google-site-verification" content="t_iGshqh_1VqMygidDloGKvAwP9cFyL1VFsXQB8BGjY" />
 
@@ -70,7 +134,7 @@
   <!-- Top -->
   <nav class="navbar navbar-demo">
     <div class="mr-lg-auto logo-container">
-      <a class="logo-link" href="./">
+      <a class="logo-link" href="{{route('welcome')}}">
         <img class="logotype" src="{{ asset('assets/images_/commun/logo-bg-dark.png') }}" alt="RICHKOFF" width="16%" />
       </a>
     </div>
@@ -94,8 +158,8 @@
 
   <div id="myModal" class="modal">
     <div class="modal-content">
-        <span class="close" id="closeBtn">&times;</span>
-        <img src="{{asset('assets/images_/bipart/front.jpg')}}" alt="Description de l'image" class="img-front"/>
+      <span class="close" id="closeBtn" style="position: relative; left: -389px; top: -11px; transition: none; cursor: move;" data-selected="true" data-label-id="0">×</span>
+        <img src="{{asset('assets/images_/bipart/front.jpg')}}" alt="Description de l'image" class="img-front" width="50%"/>
     </div>
 </div>
 

@@ -1,6 +1,6 @@
 
 .modal {
-    display: none; /* Cache le modal par défaut */
+    display: none; 
     position: fixed;
     z-index: 1;
     left: 0;
@@ -8,13 +8,13 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+    background-color: rgba(0, 0, 0, 0.4); 
   }
   
   .modal-content {
-    margin: 9% auto; /* Centrer le modal */
+    margin: 9% auto; 
     padding: 20px;
-    width: 80%; /* Largeur du modal */
+    width: 80%; 
   }
   
   .close {
@@ -32,6 +32,6 @@
   }
   
   .img-front {
-    max-width: 100%; /* S'assure que l'image ne déborde pas du modal */
-    height: auto; /* Maintient le ratio de l'image */
+    max-width: 100%; 
+    height: auto; 
   }
