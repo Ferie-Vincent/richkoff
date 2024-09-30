@@ -1,10 +1,15 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DiffuseurController;
 use App\Http\Controllers\ParfumController;
 use App\Http\Controllers\FormController;
+use Spatie\Honeypot\ProtectAgainstSpam;
+
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,7 +30,6 @@ Route::prefix('diffuseur')->group(function () {
     Route::get('/spray', [DiffuseurController::class,'spray'])->name('spray');
 });
 
-
 /*
  * Parfum Route
  */
@@ -42,4 +46,7 @@ Route::prefix('parfum')->group(function () {
 Route::post('/form-submit', [FormController::class, 'submit'])->name('form.submit');
 
 Route::get('/contact', [ContactController::class,'index'])->name('contact');
-Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
+Route::post('/contact/submit', [ContactController::class, 'submit'])->middleware(ProtectAgainstSpam::class)->name('contact.submit');
+
+Route::get('/actualite',[BlogController::class, 'index'])->name('actualite');
+Route::resource('/actualite', BlogController::class);

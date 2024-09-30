@@ -1,1 +1,0 @@
-<x-footer></x-footer>

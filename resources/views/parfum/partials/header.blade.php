@@ -53,7 +53,7 @@
                         <div class="cs-nav cs-primary_font cs-medium">
                             <ul class="cs-nav_list">
                                 <li><a href="{{route('parfum-index')}}">ACCUEIL</a></li>
-                                <li><a href="../blog/">ACTUALITÉS</a></li>
+                                <li><a href="{{route('actualite.index')}}">ACTUALITÉS</a></li>
                                 <li><a href="{{route('contact')}}">CONTACT</a></li>
                                 <!-- <li><a href="shop/">BOUTIQUE</a></li> -->
                             </ul>

@@ -65,7 +65,7 @@
             <a href="{{route('parfum-index')}}">PARFUMS</a>
           </li>
           <li>
-            <a href="blog/">ACTUALITÉS</a>
+            <a href="{{route('actualite.index')}}">ACTUALITÉS</a>
           </li>
           <li>
             <a href="{{route('contact')}}">CONTACT</a>

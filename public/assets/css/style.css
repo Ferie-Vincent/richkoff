@@ -753,6 +753,11 @@ hr {
   background-color: #ffd700;
 }
 
+.cs-accent_bg-dk,
+.cs-accent_bg-dk_hover:hover {
+  background-color: #000;
+}
+
 .cs-accent_bgs,
 .cs-accent_bgs_hover:hover {
   background-color: #000;

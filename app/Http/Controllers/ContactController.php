@@ -8,17 +8,25 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-
+    /**
+     * Affiche le formulaire de contact.
+     *
+     * @return \Illuminate\View\View
+     */
     public function index()
     {
         return view('contact');
     }
+
+    /**
+     * Traite la soumission du formulaire de contact.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function submit(Request $request)
     {
-        // Vérifier le champ botcheck pour éviter les bots
-        if ($request->input('botcheck')) {
-            return redirect()->back()->with('error', 'Bot détecté.');
-        }
+        // La validation du Honeypot est automatiquement gérée par le middleware
 
         // Valider les données du formulaire
         $validatedData = $request->validate([
