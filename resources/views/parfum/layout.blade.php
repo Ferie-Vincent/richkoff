@@ -2,4 +2,4 @@
 
     @yield('content')
 
-@include('partials.footer')
+<x-footer></x-footer>
